@@ -81,12 +81,13 @@ public class FlightBooking {
         Booking booking = new Booking(customer, passengers);
         // 提供飛機訂票資訊
         flight.openBooking(booking);
+        // 印出消費者及乘客資訊
         for (Booking bookingPerson : flight.getBookings()) {
             System.out.print(bookingPerson);
         }
-        // 機場人員新增修改飛機資訊
+        // 機場人員新增飛機資訊
         airlineCompany.registerFlight(flight);
-        // 輸出範例
+        // 顯示航班資訊
         System.out.println("航班資訊:");
         for (int i = 0; i < airlineCompany.getFlights().size(); i++) {
             System.out.print("飛機名稱:" + airlineCompany.getName());
