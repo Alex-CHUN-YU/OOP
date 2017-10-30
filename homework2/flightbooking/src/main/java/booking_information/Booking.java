@@ -103,7 +103,8 @@ public class Booking {
 
     @Override
     public String toString() {
-        return "消費者資訊:\n" + this.customer.toString()
+        return "訂機號碼:" + this.number
+                + "\n消費者資訊:\n" + this.customer.toString()
                 + "\n乘客資訊:\n" + this.passengers.toString() + "\n\n";
     }
 

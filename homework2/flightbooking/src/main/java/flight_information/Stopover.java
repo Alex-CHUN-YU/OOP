@@ -121,8 +121,8 @@ public class Stopover {
     @Override
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        return "Stopover 機場:" + this.airport + " | 抵達時間:" + sdf.format(this.departureTime)
-                + " | 出發時間:" + sdf.format(this.arrivalTime) + " | 停留時間:"
+        return "轉機的機場:" + this.airport + " | 抵達時間:" + sdf.format(this.departureTime)
+                + " | 出發時間:" + sdf.format(this.arrivalTime) + " | 休息時間:"
                 + this.getStopTime() + "小時";
     }
 

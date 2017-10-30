@@ -28,22 +28,17 @@ public class FlightBooking {
     /**
      * Airline Company Name List.
      */
-    private static ArrayList<String> companyAirportName;
+    private static ArrayList<String> departureAirportList;
 
     /**
      * Airline Company Name List.
      */
-    private static ArrayList<String> companyName;
+    private static ArrayList<String> airlineCompanyList;
 
     /**
      * City Name List.
      */
-    private static ArrayList<String> cityName;
-
-    /**
-     * City Name List.
-     */
-    private static Airport airport;
+    private static ArrayList<String> arrivalAirportList;
 
     /**
      * Initial.
@@ -51,9 +46,11 @@ public class FlightBooking {
     private static void initial () {
         randomGenerator = new Random();
         sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        companyAirportName = new ArrayList<String>(asList("桃園國際機場", "松山航空站", "高雄國際機場", "台南航空站"));
-        companyName = new ArrayList<String>(asList("TPE", "TSA", "KHH", "TNN"));
-        cityName = new ArrayList<String>(Arrays.asList("墨爾本機場", "巴黎戴高樂機場", "倫敦希斯路機場", "甘迺迪國際機場"));
+        departureAirportList = new ArrayList<String>(asList("Taoyuan International", "Songshan"
+                , "Kaohsiung International", "Tainan"));
+        arrivalAirportList = new ArrayList<String>(Arrays.asList("Melbourne", "Charles de Gaulle",
+                "Heathrow", "John F. Kennedy International"));
+        airlineCompanyList = new ArrayList<String>(asList("BR", "CI", "GE", "FE"));
     }
 
     @Test
@@ -61,21 +58,21 @@ public class FlightBooking {
         // 初始化，將所需資訊先載入
         initial ();
         // 亂數產生航空公司
-        int companyIndex = randomGenerator.nextInt(companyName.size());
-        AirlineCompany airlineCompany = new AirlineCompany(companyName.get(companyIndex));
+        AirlineCompany airlineCompany = new AirlineCompany(FlightBooking.
+                airlineCompanyList.get(randomGenerator.nextInt(airlineCompanyList.size())));
         // 飛機航班並亂數產生出發及抵達的機場
-        City departureCity = new City(companyAirportName.get(companyIndex));
-        City arrivalCity = new City(cityName.get(randomGenerator.nextInt(cityName.size())));
+        City departureCity = new City(departureAirportList.get(randomGenerator.nextInt(departureAirportList.size())));
+        City arrivalCity = new City(arrivalAirportList.get(randomGenerator.nextInt(arrivalAirportList.size())));
         Airport departureAirport = new Airport(departureCity);
         Airport arrivalAirport = new Airport(arrivalCity);
         Flight flight = new Flight(10,
                 sdf.parse("2017-10-18 13:00"), sdf.parse("2017-10-19 9:00"),
                 departureAirport, arrivalAirport);
         // 消費者訂機票程序所要求之資訊
-        Customer customer = new Customer("簡君聿", "Alex", "台灣", "0988719738");
+        Customer customer = new Customer("簡君聿", "CHUN-YU", "台灣", "0988719738");
         ArrayList<Passenger> passengers = new ArrayList<Passenger>();
-        Passenger passenger1 = new Passenger("周星馳" , "Stephen Chow");
-        Passenger passenger2 = new Passenger("劉德華" , "Andy Lau");
+        Passenger passenger1 = new Passenger("周星馳" , "Stephen-Chow");
+        Passenger passenger2 = new Passenger("劉德華" , "Andy-Lau");
         passengers.add(passenger1);
         passengers.add(passenger2);
         Booking booking = new Booking(customer, passengers);
@@ -90,9 +87,9 @@ public class FlightBooking {
         // 顯示航班資訊
         System.out.println("航班資訊:");
         for (int i = 0; i < airlineCompany.getFlights().size(); i++) {
-            System.out.print("飛機名稱:" + airlineCompany.getName());
+            System.out.print("飛機代碼:" + airlineCompany.getName() + "00");
             System.out.println(airlineCompany.getFlights().get(i).getFlightNumber() + " ");
-            System.out.println("有效期限:" + airlineCompany.getFlights().get(i).getValidityPeriod() + " ");
+            System.out.println("有效期限:" + airlineCompany.getFlights().get(i).getValidityPeriod() + "天");
             System.out.print("出發時間:" + sdf.format(airlineCompany.getFlights().get(i).getDepartureTime()) + " ");
             System.out.println("抵達時間:" + sdf.format(airlineCompany.getFlights().get(i).getArrivalTime()) + " ");
             System.out.print("出發地點:" + airlineCompany.getFlights().get(i).getDepartureAirport() + " ");

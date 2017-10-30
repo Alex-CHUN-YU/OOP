@@ -37,7 +37,7 @@ public class Airport {
 
     @Override
     public String toString() {
-        return this.city.toString();
+        return this.city.toString() + " Airport";
     }
 
     @Override
