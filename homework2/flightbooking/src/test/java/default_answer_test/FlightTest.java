@@ -1,10 +1,12 @@
+package default_answer_test;
+
 import flight_information.*;
 import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;
 
 /**
- * This a Demo.
+ * This a Test.
  */
 public class FlightTest {
     /**

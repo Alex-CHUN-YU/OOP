@@ -19,13 +19,6 @@ public class Passenger {
     private String foreignName = null;
 
     /**
-     * Default Constructor For The booking_information.Passenger Class.
-     */
-    public Passenger() {
-        // nothing to do
-    }
-
-    /**
      * Constructor About Passenger Information.
      * @param name passenger name
      * @param foreignName passenger foreign name

@@ -14,7 +14,7 @@ public class Booking {
     /**
      * Booking Number.
      */
-    private Integer number = 0;
+    private String number = null;
 
     /**
      * Booking Date.
@@ -45,14 +45,14 @@ public class Booking {
      * Set Booking Information About Booking Number.
      * @param number booking number.
      */
-    public void setBookingNumber(Integer number) {
+    public void setBookingNumber(String number) {
         this.number = number;
     }
 
     /**
      * Get Booking Information About Booking Number.
      */
-    public Integer getBookingNumber() {
+    public String getBookingNumber() {
         return this.number;
     }
 
@@ -103,9 +103,9 @@ public class Booking {
 
     @Override
     public String toString() {
-        return "訂機號碼:" + this.number
-                + "\n消費者資訊:\n" + this.customer.toString()
-                + "\n乘客資訊:\n" + this.passengers.toString() + "\n\n";
+        return "定位代碼:" + this.number
+                + "\n\n消費者資訊:\n" + this.customer.toString()
+                + "\n\n乘客資訊:\n" + this.passengers.toString() + "\n\n";
     }
 
     @Override

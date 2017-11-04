@@ -1,3 +1,5 @@
+package default_answer_test;
+
 import booking_information.Booking;
 import booking_information.Customer;
 import booking_information.Passenger;
@@ -7,7 +9,7 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 
 /**
- * This a Demo.
+ * This a Test.
  */
 public class BookingTest {
     /**
@@ -17,7 +19,7 @@ public class BookingTest {
     @Test
     public void bookingTest() throws Exception {
         // 消費者訂機票程序所要求之資訊
-        Customer customer = new Customer("簡君聿", "CHUN-YU", "台灣", "0988719738");
+        Customer customer = new Customer("簡君聿", "CHUN-YU", "台灣台南", "0988719738");
         ArrayList<Passenger> passengers = new ArrayList<Passenger>();
         Passenger passenger1 = new Passenger("周星馳" , "Stephen-Chow");
         Passenger passenger2 = new Passenger("劉德華" , "Andy-Lau");
@@ -25,11 +27,10 @@ public class BookingTest {
         passengers.add(passenger2);
         Booking booking = new Booking(customer, passengers);
         System.out.print(booking.toString());
-
         Assert.assertEquals(booking.toString(),
-                "訂機號碼:" + booking.getBookingNumber()
-                        + "\n消費者資訊:\n"
+                "定位代碼:" + booking.getBookingNumber()
+                        + "\n\n消費者資訊:\n"
                         + customer.toString()
-                        + "\n乘客資訊:\n" + passengers.toString() + "\n\n");
+                        + "\n\n乘客資訊:\n" + passengers.toString() + "\n\n");
     }
 }

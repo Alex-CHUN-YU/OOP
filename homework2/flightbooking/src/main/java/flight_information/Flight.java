@@ -14,7 +14,7 @@ public class Flight extends GenericFlight {
     /**
      * Booking Identification.
      */
-    private int bookingId = 1;
+    private String bookingId = null;
 
     /**
      * Booking List.
@@ -41,10 +41,7 @@ public class Flight extends GenericFlight {
      */
     public void openBooking(final Booking booking) {
         // Set booking number
-        booking.setBookingNumber(this.bookingId);
         this.bookings.add(booking);
-        // Increment booking number.
-        this.bookingId++;
     }
 
     /**

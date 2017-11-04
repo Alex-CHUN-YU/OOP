@@ -1,7 +1,12 @@
+package default_answer_test;
+
 import booking_information.Booking;
 import booking_information.Customer;
 import booking_information.Passenger;
-import flight_information.*;
+import flight_information.AirlineCompany;
+import flight_information.Airport;
+import flight_information.City;
+import flight_information.Flight;
 import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;
@@ -12,54 +17,23 @@ import java.util.Random;
 import static java.util.Arrays.asList;
 
 /**
- * This a Demo.
+ * This a Test.
  */
 public class FlightBooking {
-    /**
-     * Random.
-     */
-    private static Random randomGenerator;
-
-    /**
-     * Date Format.
-     */
-    private static SimpleDateFormat sdf;
-
-    /**
-     * Airline Company Name List.
-     */
-    private static ArrayList<String> departureAirportList;
-
-    /**
-     * Airline Company Name List.
-     */
-    private static ArrayList<String> airlineCompanyList;
-
-    /**
-     * City Name List.
-     */
-    private static ArrayList<String> arrivalAirportList;
-
-    /**
-     * Initial.
-     */
-    private static void initial () {
-        randomGenerator = new Random();
-        sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        departureAirportList = new ArrayList<String>(asList("Taoyuan International", "Songshan"
-                , "Kaohsiung International", "Tainan"));
-        arrivalAirportList = new ArrayList<String>(Arrays.asList("Melbourne", "Charles de Gaulle",
-                "Heathrow", "John F. Kennedy International"));
-        airlineCompanyList = new ArrayList<String>(asList("BR", "CI", "GE", "FE"));
-    }
-
     @Test
     public void flightBooking() throws Exception {
         // 初始化，將所需資訊先載入
-        initial ();
+        Random randomGenerator = new Random();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        ArrayList<String> departureAirportList =
+                new ArrayList<String>(asList("Taoyuan International", "Songshan"
+                , "Kaohsiung International", "Tainan"));
+        ArrayList<String> arrivalAirportList =
+                new ArrayList<String>(Arrays.asList("Melbourne", "Charles de Gaulle",
+                "Heathrow", "John F. Kennedy International"));
+        ArrayList<String> airlineCompanyList = new ArrayList<String>(asList("BR", "CI", "GE", "FE"));
         // 亂數產生航空公司
-        AirlineCompany airlineCompany = new AirlineCompany(FlightBooking.
-                airlineCompanyList.get(randomGenerator.nextInt(airlineCompanyList.size())));
+        AirlineCompany airlineCompany = new AirlineCompany(airlineCompanyList.get(randomGenerator.nextInt(airlineCompanyList.size())));
         // 飛機航班並亂數產生出發及抵達的機場
         City departureCity = new City(departureAirportList.get(randomGenerator.nextInt(departureAirportList.size())));
         City arrivalCity = new City(arrivalAirportList.get(randomGenerator.nextInt(arrivalAirportList.size())));

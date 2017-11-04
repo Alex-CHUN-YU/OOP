@@ -52,9 +52,25 @@ public class AirlineCompany {
      * @return number.
      */
     public Integer registerFlight(final GenericFlight flight) {
-        Integer num = this.flights.size();
+        Integer num = flight.getFlightNumber();
+        boolean flag;
+        if (num == 0) {
+            while (true) {
+                flag = false;
+                for (Integer flightNumber : flights.keySet()) {
+                    if (num.equals(flightNumber)) {
+                        flag = true;
+                    }
+                }
+                if (flag) {
+                    num += 1;
+                } else {
+                    break;
+                }
+            }
+            flight.setFlightNumber(num);
+        }
         this.flights.put(num, flight);
-        flight.setFlightNumber(num);
         return num;
     }
 
@@ -63,9 +79,12 @@ public class AirlineCompany {
      * @param flightNumber Flight Number.
      */
     public void unregisterFlight(final Integer flightNumber) {
-        if (this.flights.containsKey(flightNumber)) {
+        if (this.flights.containsKey(flightNumber) && this.flights.get(flightNumber) != null) {
             this.flights.get(flightNumber).setFlightNumber(null);
             this.flights.put(flightNumber, null);
+            System.out.println("刪除成功!!");
+        } else {
+            System.out.println("沒有此航班資訊!");
         }
     }
 
