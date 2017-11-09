@@ -90,13 +90,13 @@ public class MysqlDatabaseController {
      * @param obj sql obj
      */
     public void execInsert(String tableName, SqlObject obj) {
-        String sql="INSERT INTO " + tableName + " (" + obj.getColumnNameString() + ")"
+        String sql = "INSERT INTO " + tableName + " (" + obj.getColumnNameString() + ")"
                 + " VALUES (" + obj.getColumnValueString() + ");";
         try {
-            PreparedStatement ps = connection.prepareStatement(sql);
-            ps.execute();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.execute();
         } catch (SQLException e) {
-            System.out.println("The data has been loaded into db " + tableName + " table.");
+            System.out.println("The data can't loaded into db " + tableName + " table.");
         }
     }
 
@@ -108,10 +108,10 @@ public class MysqlDatabaseController {
     public void execDelete(String tableName, String condition) {
         String sql = "DELETE FROM " + tableName + " WHERE " + condition;
         try {
-            PreparedStatement ps = connection.prepareStatement(sql);
-            ps.execute();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.execute();
         } catch (SQLException e) {
-            System.out.println("The data has been loaded into db " + tableName + " table.");
+            System.out.println("The data can't loaded into db " + tableName + " table.");
         }
     }
 
@@ -127,7 +127,7 @@ public class MysqlDatabaseController {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.execute();
         } catch (SQLException e) {
-            System.out.println("The data has been loaded into db " + tableName + " table.");
+            System.out.println("The data can't loaded into db " + tableName + " table.");
         }
     }
 

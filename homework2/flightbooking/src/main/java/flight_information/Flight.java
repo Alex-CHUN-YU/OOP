@@ -9,6 +9,10 @@ import java.util.List;
 
 /**
  * 主要負責預定機票之類別.
+ *
+ * @version 1.0 2017年10月23日
+ * @author Alex
+ *
  */
 public class Flight extends GenericFlight {
     /**

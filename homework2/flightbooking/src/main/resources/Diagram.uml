@@ -3,93 +3,91 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="467.0" y="105.0">database.MysqlDatabaseController</node>
-    <node x="15.75" y="412.0">flight_information.AirlineCompany</node>
-    <node x="511.0" y="2.0">database.SqlObject</node>
-    <node x="493.61442307692306" y="309.0">booking_information.Booking</node>
-    <node x="0.0" y="309.0">flight_information.GenericFlight</node>
-    <node x="186.45" y="103.0">flight_information.Airport</node>
-    <node x="5.9384615384615245" y="206.0">flight_information.Stopover</node>
-    <node x="398.61442307692306" y="412.0">flight_information.Flight</node>
-    <node x="189.45" y="0.0">flight_information.City</node>
-    <node x="357.0" y="206.0">booking_information.Customer</node>
-    <node x="661.0" y="206.0">booking_information.Passenger</node>
+    <node x="483.46428571428567" y="234.8571428571428">database.MysqlDatabaseController</node>
+    <node x="0.0" y="1294.0">flight_information.AirlineCompany</node>
+    <node x="488.96428571428567" y="-44.285714285714306">database.SqlObject</node>
+    <node x="565.7804487179487" y="867.0">booking_information.Booking</node>
+    <node x="57.5" y="798.0">flight_information.GenericFlight</node>
+    <node x="203.56634615384615" y="220.0">flight_information.Airport</node>
+    <node x="58.45737179487185" y="451.5">flight_information.Stopover</node>
+    <node x="470.1137820512821" y="1317.0">flight_information.Flight</node>
+    <node x="203.56634615384615" y="0.0">flight_information.City</node>
+    <node x="729.75" y="440.0">booking_information.Customer</node>
+    <node x="418.75" y="486.0">booking_information.Passenger</node>
   </nodes>
   <notes />
   <edges>
     <edge source="flight_information.Airport" target="flight_information.City">
-      <point x="-35.0" y="-26.5" />
-      <point x="221.45" y="78.0" />
-      <point x="222.95" y="78.0" />
-      <point x="-33.5" y="26.5" />
+      <point x="51.25" y="-85.0" />
+      <point x="51.25" y="85.0" />
     </edge>
     <edge source="flight_information.AirlineCompany" target="flight_information.GenericFlight">
-      <point x="50.75" y="-26.5" />
-      <point x="0.0" y="26.5" />
+      <point x="75.5" y="-85.0" />
+      <point x="0.0" y="223.0" />
     </edge>
     <edge source="booking_information.Booking" target="booking_information.Passenger">
-      <point x="115.875" y="-26.5" />
-      <point x="763.989423076923" y="284.0" />
-      <point x="817.75" y="284.0" />
-      <point x="52.25" y="26.5" />
+      <point x="-38.875" y="-154.0" />
+      <point x="682.4054487179487" y="773.0" />
+      <point x="637.0" y="773.0" />
+      <point x="72.75" y="108.0" />
     </edge>
     <edge source="flight_information.Flight" target="booking_information.Booking">
-      <point x="117.20000000000005" y="-26.5" />
-      <point x="662.314423076923" y="392.0" />
-      <point x="751.114423076923" y="392.0" />
-      <point x="103.0" y="26.5" />
+      <point x="59.0" y="-62.0" />
+      <point x="676.6137820512821" y="1274.0" />
+      <point x="721.2804487179487" y="1274.0" />
+      <point x="0.0" y="154.0" />
     </edge>
     <edge source="flight_information.Flight" target="flight_information.Airport">
-      <point x="-58.60000000000002" y="-26.5" />
-      <point x="486.51442307692304" y="382.0" />
-      <point x="346.5" y="382.0" />
-      <point x="346.5" y="186.0" />
-      <point x="312.45" y="186.0" />
-      <point x="56.0" y="26.5" />
+      <point x="-59.0" y="-62.0" />
+      <point x="558.6137820512821" y="1264.0" />
+      <point x="408.25" y="1264.0" />
+      <point x="408.25" y="415.0" />
+      <point x="388.06634615384615" y="415.0" />
+      <point x="82.0" y="85.0" />
     </edge>
     <edge source="booking_information.Booking" target="booking_information.Customer">
-      <point x="-115.875" y="-26.5" />
-      <point x="532.239423076923" y="284.0" />
-      <point x="428.0" y="284.0" />
-      <point x="-71.0" y="26.5" />
+      <point x="38.875" y="-154.0" />
+      <point x="760.1554487179487" y="773.0" />
+      <point x="803.0" y="773.0" />
+      <point x="-73.25" y="154.0" />
     </edge>
     <edge source="flight_information.GenericFlight" target="flight_information.Airport">
-      <point x="134.39999999999998" y="-26.5" />
-      <point x="302.4" y="284.0" />
-      <point x="268.0394230769231" y="284.0" />
-      <point x="268.0394230769231" y="186.0" />
-      <point x="284.45" y="186.0" />
-      <point x="28.0" y="26.5" />
+      <point x="67.60000000000002" y="-223.0" />
+      <point x="294.1" y="773.0" />
+      <point x="310.4602564102564" y="773.0" />
+      <point x="310.4602564102564" y="415.0" />
+      <point x="306.06634615384615" y="415.0" />
+      <point x="0.0" y="85.0" />
     </edge>
     <edge source="flight_information.Stopover" target="flight_information.Airport">
-      <point x="-59.25" y="-26.5" />
-      <point x="65.18846153846152" y="176.0" />
-      <point x="200.45" y="176.0" />
-      <point x="-56.0" y="26.5" />
+      <point x="59.75" y="-142.5" />
+      <point x="237.70737179487185" y="415.0" />
+      <point x="265.06634615384615" y="415.0" />
+      <point x="-41.0" y="85.0" />
     </edge>
     <edge source="flight_information.GenericFlight" target="flight_information.Stopover">
-      <point x="-67.19999999999996" y="-26.5" />
-      <point x="100.80000000000004" y="284.0" />
-      <point x="124.43846153846152" y="284.0" />
-      <point x="0.0" y="26.5" />
+      <point x="-135.2" y="-223.0" />
+      <point x="91.30000000000001" y="773.0" />
+      <point x="98.29070512820516" y="773.0" />
+      <point x="-79.66666666666667" y="142.5" />
     </edge>
     <edge source="flight_information.Flight" target="flight_information.GenericFlight">
-      <point x="-117.19999999999999" y="-26.5" />
-      <point x="427.9144230769231" y="392.0" />
-      <point x="280.0" y="392.0" />
-      <point x="112.0" y="26.5" />
+      <point x="-118.0" y="-62.0" />
+      <point x="499.6137820512821" y="1274.0" />
+      <point x="339.1666666666667" y="1274.0" />
+      <point x="112.66666666666669" y="223.0" />
     </edge>
     <edge source="database.MysqlDatabaseController" target="database.SqlObject">
-      <point x="0.0" y="-26.5" />
-      <point x="0.0" y="26.5" />
+      <point x="0.0" y="-96.5" />
+      <point x="0.0" y="131.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="531.5" y="341.0" />
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="528.9999999999999" y="541.8571428571428" />
   <SelectedNodes>
     <node>database.MysqlDatabaseController</node>
-    <node>database.SqlObject</node>
   </SelectedNodes>
   <Categories>
+    <Category>Methods</Category>
     <Category>Constructors</Category>
   </Categories>
   <SCOPE>All</SCOPE>
