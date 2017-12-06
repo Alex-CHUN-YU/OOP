@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-197.42916666666665" y="-50.0">company_information.Company</node>
+    <node x="-209.42916666666665" y="100.0">company_information.Cinema</node>
+    <node x="-229.0" y="584.0">booking_information.Booking</node>
+    <node x="-206.02777777777777" y="687.0">booking_information.Customer</node>
+    <node x="-201.42916666666665" y="342.0">booking_information.Movie</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="booking_information.Customer" target="booking_information.Movie">
+      <point x="111.0" y="-61.5" />
+      <point x="34.47222222222223" y="662.0" />
+      <point x="42.5" y="662.0" />
+      <point x="42.5" y="559.0" />
+      <point x="35.987499999999955" y="559.0" />
+      <point x="107.91666666666663" y="96.0" />
+    </edge>
+    <edge source="company_information.Company" target="company_information.Cinema">
+      <point x="94.125" y="50.0" />
+      <point x="22.195833333333354" y="75.0" />
+      <point x="31.195833333333326" y="75.0" />
+      <point x="103.125" y="-96.0" />
+    </edge>
+    <edge source="booking_information.Movie" target="booking_information.Booking">
+      <point x="21.583333333333314" y="96.0" />
+      <point x="-50.34583333333333" y="559.0" />
+      <point x="-46.30000000000001" y="559.0" />
+      <point x="52.19999999999999" y="-26.5" />
+    </edge>
+    <edge source="company_information.Cinema" target="company_information.Company">
+      <point x="-103.125" y="-96.0" />
+      <point x="-175.05416666666665" y="75.0" />
+      <point x="-166.05416666666665" y="75.0" />
+      <point x="-94.125" y="50.0" />
+    </edge>
+    <edge source="booking_information.Customer" target="booking_information.Booking">
+      <point x="-37.0" y="-61.5" />
+      <point x="-113.52777777777777" y="662.0" />
+      <point x="-120.25" y="662.0" />
+      <point x="-21.75" y="26.5" />
+    </edge>
+    <edge source="booking_information.Booking" target="booking_information.Customer">
+      <point x="108.75" y="26.5" />
+      <point x="10.25" y="662.0" />
+      <point x="-2.5277777777777715" y="662.0" />
+      <point x="74.0" y="-61.5" />
+    </edge>
+    <edge source="company_information.Cinema" target="booking_information.Movie">
+      <point x="68.75000000000003" y="96.0" />
+      <point x="-3.1791666666666174" y="317.0" />
+      <point x="-7.179166666666646" y="317.0" />
+      <point x="64.75" y="-96.0" />
+    </edge>
+    <edge source="booking_information.Movie" target="company_information.Cinema">
+      <point x="-64.75" y="-96.0" />
+      <point x="-136.67916666666665" y="317.0" />
+      <point x="-140.67916666666665" y="317.0" />
+      <point x="-68.75" y="96.0" />
+    </edge>
+    <edge source="booking_information.Booking" target="booking_information.Movie">
+      <point x="-104.39999999999998" y="-26.5" />
+      <point x="-202.89999999999998" y="559.0" />
+      <point x="-179.84583333333327" y="559.0" />
+      <point x="-107.91666666666663" y="96.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="374.5" />
+  <SelectedNodes>
+    <node>company_information.Cinema</node>
+    <node>booking_information.Booking</node>
+    <node>company_information.Company</node>
+    <node>booking_information.Customer</node>
+    <node>booking_information.Movie</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
